@@ -2,4 +2,4 @@
 
 Keeping command prompt files Organised.
 
-Also used for git tutoring purpose.
+Also used for git tutoring purpose. This will be helpful.
