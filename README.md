@@ -1,8 +1,6 @@
-# System Environment
+# System Environment 
 
-##Learning to make doc in .md
+## Setting Mac Terminal environment for Development
 
-# is aHeading tag.
 Keeping command prompt files Organised.
-
 Also used for git tutoring purpose. This will be helpful.
