@@ -11,3 +11,13 @@ alias netspeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads
 # Shows the full path on the Finder's Window top
 alias showPath='defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;killall Finder'
 alias hidePAth='defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO;killall Finder'
+
+# Convert file from some other system that has foreign line-endings into "Unix" line-endings by running this Perl command:
+# The function makes a backup copy of the original file with a "~" suffix before editing the original file to change it to use "Unix" line-endings.
+USE: fixlines nitin.txt
+fixlines () { 
+	/usr/bin/perl -pi~ -e 's/\r\n?/\n/g' "$@" ; 
+}
+
+# Maven Clean 
+alias mvnClean='mvn clean eclipse:eclipse -Dwtpversion=2.0'

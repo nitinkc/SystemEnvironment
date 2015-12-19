@@ -27,4 +27,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
+# History of commands of History
 HISTFILESIZE=2500
