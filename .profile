@@ -4,7 +4,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 #Android Delelopment Related SDK settings
 export ANDROID_HOME=/Applications/a.Development/android-sdk-macosx
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 export PATH=$PATH:/Users/nitin/Library/Android/sdk/platform-tools
 
 # Adding Gradle path manually on night of Aug 1, 2:03
@@ -20,12 +20,11 @@ export PATH=$PATH:$M2_HOME/bin
 export ANT_HOME=/usr/local/apache-ant-1.9.6
 export PATH=$PATH:ANT_HOME/bin
 
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
-HISTFILESIZE=50000
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+HISTFILESIZE=2500
