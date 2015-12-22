@@ -21,3 +21,12 @@ fixlines () {
 
 # Maven Clean 
 alias mvnClean='mvn clean eclipse:eclipse -Dwtpversion=2.0'
+
+# JBoss Server Start
+alias startJboss='cd /usr/local/jboss-6.0.0.Final/bin ; ./run.sh'
+
+# All ports occupied
+alias ports='lsof -i -P | grep -i "listen"'
+
+# is8080 Occupied
+alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
