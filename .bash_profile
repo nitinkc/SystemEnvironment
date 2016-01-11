@@ -23,5 +23,5 @@ fi
 
 # Setting up the Prompt
 export PS1="\w>"
-export PS1="\W]\$ "
-export PS1="\u@\w $"
+# export PS1="\W]\$ "
+# export PS1="\u@\w $"

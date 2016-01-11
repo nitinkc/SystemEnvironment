@@ -1,3 +1,4 @@
+alias myAlias='cat ~/.bash_aliases'
 alias c='clear'
 
 # Show/Hide Hidden Files in Mac

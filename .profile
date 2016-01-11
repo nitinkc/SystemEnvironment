@@ -1,8 +1,8 @@
 # In any New System, change the paths of these ENV Variables
-#Setting JAVA_HOME
+# Setting JAVA_HOME
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-#Android Delelopment Related SDK settings
+# Android Delelopment Related SDK settings
 export ANDROID_HOME=/Applications/a.Development/android-sdk-macosx
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 export PATH=$PATH:/Users/nitin/Library/Android/sdk/platform-tools
@@ -15,10 +15,12 @@ export PATH=$PATH:$GRADLE_HOME/bin
 export M2_HOME="/usr/local/apache-maven-3.3.1"
 export PATH=$PATH:$M2_HOME/bin
 
-
 # Apache Ant
 export ANT_HOME=/usr/local/apache-ant-1.9.6
 export PATH=$PATH:ANT_HOME/bin
+
+# Jboss
+export JBOSS_HOME=/usr/local/jboss-6.0.0.Final
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
@@ -26,6 +28,12 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
+
+# Setting Sublime as default editor for the all the text files (Do in ~/bash_profile)
+export EDITOR='subl -w'
+
+# Node Package Manager
+# gets added in the /usr/local
 
 # History of commands of History
 HISTFILESIZE=2500
