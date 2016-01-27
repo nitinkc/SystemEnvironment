@@ -63,3 +63,5 @@ create a .bash_profile or .profile file in the home directory and set the path i
 export PATH="/usr/local/<my_package>/bin:$PATH"
 
 /etc/paths.d
+
+/etc/launchd.conf has the system environment variables
