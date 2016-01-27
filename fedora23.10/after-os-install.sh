@@ -33,6 +33,7 @@ gedit /etc/yum.repos.d/google-chrome.repo
 ## The RPMFusion provides some free and non-free software for Fedora
 rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 
+# Install Feddy tool to download most used apps like skype, chrome etc 
 curl http://folkswithhats.org/fedy-installer -o fedy-installer && chmod +x fedy-installer && ./fedy-installer
 
 #install VLC, The VLC package is included in the RPMFusion repository 
@@ -47,6 +48,3 @@ dnf install unrar p7zip
 #install Spotify
 dnf config-manager --add-repo=http://negativo17.org/repos/fedora-spotify.repo
 dnf install spotify-client
-
-
-
