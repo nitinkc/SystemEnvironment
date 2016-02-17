@@ -22,6 +22,10 @@ export PATH=$PATH:ANT_HOME/bin
 # Jboss
 export JBOSS_HOME=/usr/local/jboss-6.0.0.Final
 
+# Setting up the GO Path
+export GOPATH=$HOME/go
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -37,3 +41,11 @@ export EDITOR='subl -w'
 
 # History of commands of History
 HISTFILESIZE=2500
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+

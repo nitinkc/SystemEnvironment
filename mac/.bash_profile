@@ -25,3 +25,11 @@ fi
 export PS1="\w>"
 # export PS1="\W]\$ "
 # export PS1="\u@\w $"
+
+##
+# Your previous /Users/nitin/.bash_profile file was backed up as /Users/nitin/.bash_profile.macports-saved_2016-01-14_at_14:21:56
+##
+
+# MacPorts Installer addition on 2016-01-14_at_14:21:56: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
