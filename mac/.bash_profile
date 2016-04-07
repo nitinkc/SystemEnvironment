@@ -1,13 +1,13 @@
-# .bash_profile ->  login shell 
-# Invoked as an interactive login shell: First reads and executes commands from the file /etc/profile, if it exists. 
-# Then it looks for ~/.bash_profile, ~/.bash_login, and ~/.profile, in that order, 
+# .bash_profile ->  login shell
+# Invoked as an interactive login shell: First reads and executes commands from the file /etc/profile, if it exists.
+# Then it looks for ~/.bash_profile, ~/.bash_login, and ~/.profile, in that order,
 # and reads and executes commands from the first one that exists and is readable.
 
 # If you configure .bash_profile, no need to configure .profile
 # To use a .profile, need to include the source ~/.profile in .bash_profile so that the .profile file is read
 
 # Load the default .profile
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" 
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 
 #sourcing .bashrc from .bash_profile, Just to be on the safer side
@@ -21,8 +21,8 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 
-# Setting up the Prompt
-export PS1="\w>"
+# Setting up the Prompt - Dir Path on top line and Prompt in the immediate next
+export PS1="\w\n>"
 # export PS1="\W]\$ "
 # export PS1="\u@\w $"
 

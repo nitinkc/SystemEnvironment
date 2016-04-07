@@ -34,7 +34,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
 # Setting Sublime as default editor for the all the text files (Do in ~/bash_profile)
-export EDITOR='subl -w'
+# ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+#export EDITOR=`subl -w`
 
 # Node Package Manager
 # gets added in the /usr/local
@@ -48,4 +49,3 @@ shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-

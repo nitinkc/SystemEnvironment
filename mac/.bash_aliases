@@ -30,4 +30,7 @@ alias startJboss='cd /usr/local/jboss-6.0.0.Final/bin ; ./run.sh'
 alias ports='lsof -i -P | grep -i "listen"'
 
 # is8080 Occupied
+
 alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
+
+alias myip = ifconfig | grep "inet " | grep -v 127.0.0.1
