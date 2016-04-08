@@ -30,6 +30,12 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# Setup Groovy Path Apr 07 2016 
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export PATH=$GROOVY_HOME/bin:$PATH
+
+
+# FINALLY CLUB ALL PATHS TOGETHER AND SET THE FINAL PATH VARIABLE
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
