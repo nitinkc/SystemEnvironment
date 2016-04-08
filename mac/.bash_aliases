@@ -33,4 +33,4 @@ alias ports='lsof -i -P | grep -i "listen"'
 
 alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
 
-alias myip = ifconfig | grep "inet " | grep -v 127.0.0.1
+alias myip='ifconfig | grep "inet " | grep -v 127.0.0.1'
