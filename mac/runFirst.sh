@@ -1,6 +1,6 @@
 #Semlink the files to be consistent with further edits 
 
-ln -s .bash_aliases ~
-ln -s .bash_profile ~
-ln -s .bashrc ~
-ln -s .profile ~
+ln -s mac/.bash_aliases ~
+ln -s mac/.bash_profile ~
+ln -s mac/.bashrc ~
+ln -s mac/.profile ~

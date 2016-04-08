@@ -6,20 +6,17 @@ Keeping command prompt files Organised.
 Also used for git tutoring purpose. This will be helpful.
 
 Global settings:
+` 
 /etc/profile
 /etc/bashrc
+`
 
 Personal settings:
+` 
 ~/.bash_profile OR  ~/.bash_login OR ~/.profile
 ~/.bashrc
 ~/.bash_aliases
-
-#Semlink the files to be consistent with further edits 
-
-ln -s .bash_aliases ~
-ln -s .bash_profile ~
-ln -s .bashrc ~
-ln -s .profile ~
+`
 
 .bash_profile ->  login shell 
 .bashrc -> non-login shell. 
@@ -32,6 +29,14 @@ then "~/.bash_profile" or "~/.bash_login" or "~/.profile"
 (whichever one exists - it only reads one of these, checking for them in the order mentioned).
 
 When a "non-login shell" starts up, it reads the file "/etc/bashrc" and then the file "~/.bashrc".
+
+#Semlink the files to be consistent with further edits 
+`sh
+ln -s .bash_aliases ~
+ln -s .bash_profile ~
+ln -s .bashrc ~
+ln -s .profile ~
+`
 
 PATH
 
@@ -62,13 +67,11 @@ $HOME/.bash_profile file using export syntax.
 export JRE_HOME=$(/usr/libexec/java_home)
 
 #Setting Temporary Environmental Variables in OS X
-export PATH=$PATH:~/bin
+`export PATH=$PATH:~/bin`
 ###Adding a Temporary Location
-PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+`PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin`
 ###Adding in a Permanent Location
 create a .bash_profile or .profile file in the home directory and set the path in the files as. 
-export PATH="/usr/local/<my_package>/bin:$PATH"
-
+`sh export PATH="/usr/local/<my_package>/bin:$PATH" ` 
 /etc/paths.d
-
 /etc/launchd.conf has the system environment variables
