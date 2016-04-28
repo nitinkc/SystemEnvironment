@@ -22,7 +22,8 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Setting up the Prompt - Dir Path on top line and Prompt in the immediate next
-export PS1="\w\n>"
+# Setting up the Prompt - Dir Path on top line and Prompt in the immediate next
+export PS1="\n\w\n----------------------\n\u@> "
 # export PS1="\W]\$ "
 # export PS1="\u@\w $"
 
