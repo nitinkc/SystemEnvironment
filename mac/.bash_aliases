@@ -15,7 +15,7 @@ alias hidePAth='defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO
 
 # Convert file from some other system that has foreign line-endings into "Unix" line-endings by running this Perl command:
 # The function makes a backup copy of the original file with a "~" suffix before editing the original file to change it to use "Unix" line-endings.
-USE: fixlines nitin.txt
+# USE: fixlines nitin.txt
 fixlines () {
 	/usr/bin/perl -pi~ -e 's/\r\n?/\n/g' "$@" ;
 }
@@ -33,11 +33,12 @@ alias ports='lsof -i -P | grep -i "listen"'
 
 alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
 
-alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1'
+alias myip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 
 alias src='source ~/.bash_profile'
 
 # some more ls aliases
+alias ls='ls -GFh'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
