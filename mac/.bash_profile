@@ -105,8 +105,7 @@ if ! shopt -oq posix; then
 fi
 
 # Setting up the Prompt - Dir Path on top line and Prompt in the immediate next
-# Setting up the Prompt - Dir Path on top line and Prompt in the immediate next
-export PS1="\n\[\e[0;34m\]\w\[\e[0m\]\n----------------------\n\u@> "
+export PS1="**[\d \$(date +%k:%M:%S)]**\[\e[0;34m\]\w\[\e[0m\]\n[$] "
 # export PS1="\W]\$ "
 # export PS1="\u@\w $"
 
