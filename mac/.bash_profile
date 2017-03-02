@@ -17,8 +17,8 @@
 # Adding aliases from a separate file
 # . ~/.bash_aliases will source (load) aliases in the context of the currently running shell.
 # The advantage of having all aliases in one file : easier to re-load them when changes are made.
-if [ -f ~/.bash_aliases ]; then
-. ~/.bash_aliases
+if [ -f ~/.my_aliases ]; then
+. ~/.my_aliases
 fi
 
 
@@ -90,7 +90,7 @@ fi
 
 
 # Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
+#sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # enable programmable completion features (you don't need to enable
@@ -120,3 +120,4 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export TERM="xterm-color" 
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
