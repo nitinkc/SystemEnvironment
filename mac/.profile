@@ -17,7 +17,7 @@ export PATH=$PATH:$M2_HOME/bin
 
 # Apache Ant
 export ANT_HOME=/usr/local/apache-ant-1.9.6
-export PATH=$PATH:ANT_HOME/bin
+export PATH=$PATH:$ANT_HOME/bin
 
 # Jboss
 export JBOSS_HOME=/usr/local/jboss-6.0.0.Final
@@ -51,7 +51,7 @@ HISTFILESIZE=2500
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
-shopt -s histappend                      # append to history, don't overwrite it
+#shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
