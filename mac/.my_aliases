@@ -1,4 +1,4 @@
-alias myAlias='cat ~/.bash_aliases'
+alias myAlias='cat ~/.my_aliases'
 alias c='clear'
 
 # Show/Hide Hidden Files in Mac
@@ -44,3 +44,6 @@ alias ls='ls -GFh'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"

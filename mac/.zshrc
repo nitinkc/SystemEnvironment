@@ -10,8 +10,6 @@ export ZSH=/Users/nitin/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 ZSH_THEME=pygmalion
 
-# Add env.sh
-source $ZSH/oh-my-zsh.sh
 
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
@@ -29,6 +27,8 @@ if [ -f ~/.my_aliases ]; then
 . ~/.my_aliases
 fi
 
+# Add env.sh
+source $ZSH/oh-my-zsh.sh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,11 +88,4 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
