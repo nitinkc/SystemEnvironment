@@ -8,7 +8,8 @@ export ZSH=/Users/nitin/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME=pygmalion
+ZSH_THEME="pygmalion"
+#ZSH_THEME="random"
 
 
 # Load the default .profile
@@ -18,7 +19,7 @@ ZSH_THEME=pygmalion
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize github vagrant virtualenv brew osx zsh-syntax-highlighting)
 
 # Adding aliases from a separate file
 # . ~/.bash_aliases will source (load) aliases in the context of the currently running shell.
