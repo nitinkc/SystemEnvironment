@@ -12,7 +12,7 @@ ZSH_THEME="pygmalion"
 #ZSH_THEME="random"
 
 
-# Load the default .profile
+# Load the default .profile (all PATHS are in .Profile)
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)

@@ -2,19 +2,32 @@ alias myAlias='subl ~/.my_aliases'
 alias c='clear'
 
 # Show/Hide Hidden Files in Mac
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES;killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO;killall Finder /System/Library/CoreServices/Finder.app'
-
-# Find the Speed of the Internet
-alias netSpeed='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
-alias netspeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zipsho'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES;killall Finder /System/Library/CoreServices/Finder.app;say Hidden Files Revealed'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO;killall Finder /System/Library/CoreServices/Finder.app;say Files Hidden'
 
 # Shows the full path on the Finder's Window top
 alias showPath='defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;killall Finder'
 alias hidePath='defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO;killall Finder'
 
+# Remove the delays in the Dock
+alias showDock='defaults write com.apple.Dock autohide-delay -float 0 && killall Dock'
+alias hideDock='defaults delete com.apple.Dock autohide-delay && killall Dock;say dock is now delayed'
+
 alias enabledel='defaults write com.apple.finder NSUserKeyEquivalents {"Move to Trash"="\U007F"};killall Finder'
 alias disabledel='defaults delete com.apple.finder NSUserKeyEquivalents;killall Finder'
+
+alias showName='defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName'
+
+alias showLib='chflags nohidden ~/Library/;killall Finder;say Library Revealed'
+alias hideLib='chflags hidden ~/Library/;killall Finder;say Library Hidden'
+
+# Find the Speed of the Internet
+alias netSpeed='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+alias netspeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+
+alias bootVerbose='sudo nvram boot-args="-v"'
+alias bootNonVerbose='sudo nvram boot-args='
+
 # Convert file from some other system that has foreign line-endings into "Unix" line-endings by running this Perl command:
 # The function makes a backup copy of the original file with a "~" suffix before editing the original file to change it to use "Unix" line-endings.
 # USE: fixlines nitin.txt
@@ -44,5 +57,5 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="atom ~/.zshrc"
+alias ohmyzsh="atom ~/.oh-my-zsh"
