@@ -13,11 +13,14 @@ alias hidePath='defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO
 alias showDock='defaults write com.apple.Dock autohide-delay -float 0 && killall Dock'
 alias hideDock='defaults delete com.apple.Dock autohide-delay && killall Dock;say dock is now delayed'
 
+# Disable Delete message
 alias enabledel='defaults write com.apple.finder NSUserKeyEquivalents {"Move to Trash"="\U007F"};killall Finder'
 alias disabledel='defaults delete com.apple.finder NSUserKeyEquivalents;killall Finder'
 
+# Show the Login name of the User
 alias showName='defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName'
 
+# Show Library Folder
 alias showLib='chflags nohidden ~/Library/;killall Finder;say Library Revealed'
 alias hideLib='chflags hidden ~/Library/;killall Finder;say Library Hidden'
 
@@ -25,8 +28,22 @@ alias hideLib='chflags hidden ~/Library/;killall Finder;say Library Hidden'
 alias netSpeed='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias netspeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
+# Show the Booting as Verbose/Non Verbose
 alias bootVerbose='sudo nvram boot-args="-v"'
 alias bootNonVerbose='sudo nvram boot-args='
+
+# AutoScroll
+alias autoScroll_always='defaults write NSGlobalDomain AppleShowScrollBars -string "Always"'
+alias autoScroll_auto='defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"'
+
+# Restart Your Mac Automatically After It Freezes
+alias res='sudo systemsetup -setrestartfreeze on'
+
+# Change Screenshot File Type
+alias screenShotType='defaults write com.apple.screencapture type -string "png"'
+# Change Screenshot Location
+alias screenTypeDir='defaults write com.apple.screencapture location /Users/nitin/Downloads'
+
 
 # Convert file from some other system that has foreign line-endings into "Unix" line-endings by running this Perl command:
 # The function makes a backup copy of the original file with a "~" suffix before editing the original file to change it to use "Unix" line-endings.
