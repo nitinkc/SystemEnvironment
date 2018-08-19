@@ -109,18 +109,15 @@ export PS1="**[\d \$(date +%k:%M:%S)]**\[\e[0;34m\]\w\[\e[0m\]\n[$] "
 # export PS1="\W]\$ "
 # export PS1="\u@\w $"
 
-##
-# Your previous /Users/nitin/.bash_profile file was backed up as /Users/nitin/.bash_profile.macports-saved_2016-01-14_at_14:21:56
-##
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+export TERM="xterm-color" 
+
+# added by Anaconda3 5.1.0 installer
+export PATH="/Users/nitin/anaconda3/bin:$PATH"
 
 # MacPorts Installer addition on 2016-01-14_at_14:21:56: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-export TERM="xterm-color" 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-# added by Anaconda3 5.1.0 installer
-export PATH="/Users/nitin/anaconda3/bin:$PATH"
