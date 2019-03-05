@@ -37,7 +37,7 @@ export PATH=$GROOVY_HOME/bin:$PATH
 
 # FINALLY CLUB ALL PATHS TOGETHER AND SET THE FINAL PATH VARIABLE
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Setting Sublime as default editor for the all the text files (Do in ~/bash_profile)
 # ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl

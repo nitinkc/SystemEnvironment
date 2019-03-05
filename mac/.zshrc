@@ -31,6 +31,8 @@ fi
 # Add env.sh
 source $ZSH/oh-my-zsh.sh
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
