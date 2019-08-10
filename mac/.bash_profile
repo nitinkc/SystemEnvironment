@@ -113,9 +113,6 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export TERM="xterm-color" 
 
-# added by Anaconda3 5.1.0 installer
-export PATH="/Users/nitin/anaconda3/bin:$PATH"
-
 # MacPorts Installer addition on 2016-01-14_at_14:21:56: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.

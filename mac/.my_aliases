@@ -76,3 +76,5 @@ alias l='ls -CF'
 
 alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
+
+alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
