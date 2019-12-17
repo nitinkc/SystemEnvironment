@@ -12,8 +12,8 @@ export GRADLE_HOME=/Applications/a.Development/gradle-2.0
 export PATH=$PATH:$GRADLE_HOME/bin
 
 # Setting Maven Home
-export M2_HOME="/usr/local/apache-maven-3.3.1"
-export PATH=$PATH:$M2_HOME/bin
+#export M2_HOME="/usr/local/apache-maven-3.3.1"
+#export PATH=$PATH:$M2_HOME/bin
 
 # Apache Ant
 export ANT_HOME=/usr/local/apache-ant-1.9.6
