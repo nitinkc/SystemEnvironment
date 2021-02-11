@@ -91,10 +91,10 @@ then "~/.bash_profile" or "~/.bash_login" or "~/.profile"
 When a "non-login shell" starts up, it reads the file "/etc/bashrc" and then the file "~/.bashrc".
 
 #Semlink the files to be consistent with further edits
-```sh
-## Assuming the project is cloned in $HOME/Programming folder on a new mac
-# The following commands will symlink the files and be modified for later use on other macs
+Assuming the project is cloned in $HOME/Programming folder on a new mac
 
+The following commands will symlink the files and be modified for later use on other macs
+```sh
 # ~ refers to $HOME Directory
 ln -s $HOME/Programming/SystemEnvironment/mac/.my_aliases ~
 ln -s $HOME/Programming/SystemEnvironment/mac/.profile ~
