@@ -1,19 +1,27 @@
 # In any New System, change the paths of these ENV Variables
 # Setting JAVA_HOME
-export JAVA_HOME=$(/usr/libexec/java_home)
+#Picks up heighest Java from /Library/Java/JavaVirtualMachines path
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+#Manually setting up the Java 1.8 due to Projects requirements
+# By default, every time the terminal loads, JAVA 8 gets set in priority.
+#In case java 15 was set in the previous session, this setting overrides it
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
+export PATH=$PATH:$JAVA_HOME/bin
 
 # Android Development Related SDK settings
-export ANDROID_HOME=/Applications/a.Development/android-sdk-macosx
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
-export PATH=$PATH:/Users/nitin/Library/Android/sdk/platform-tools
-
-# Adding Gradle path manually on night of Aug 1, 2:03
-export GRADLE_HOME=/Applications/a.Development/gradle-2.0
-export PATH=$PATH:$GRADLE_HOME/bin
+#export ANDROID_HOME=/Applications/a.Development/android-sdk-macosx
+#export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
+#export PATH=$PATH:/Users/nitin/Library/Android/sdk/platform-tools
 
 # Setting Maven Home
-#export M2_HOME="/usr/local/apache-maven-3.3.1"
-#export PATH=$PATH:$M2_HOME/bin
+export M2_HOME=/usr/local/Cellar/maven/3.6.3_1
+export PATH=$PATH:$M2_HOME/bin
+
+# Gradle Path
+export GRADLE_HOME=/Applications/devTools/gradle-6.6.1
+#export GRADLE_HOME=/usr/local/Cellar/gradle/6.7
+export PATH=$PATH:$GRADLE_HOME/bin
 
 # Apache Ant
 export ANT_HOME=/usr/local/apache-ant-1.9.6
@@ -34,10 +42,10 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 export RUBY_HOME=/usr/local/opt/ruby
 export RUBY_GEMS_HOME=/usr/local/lib/ruby/gems/2.6.0
 export PATH=$RUBY_HOME/bin:$RUBY_GEMS_HOME/bin:$PATH
+
 #https://jekyllrb.com/docs/installation/macos/
 #Every time you update Ruby to a version with a different first two digits, you will need to update your path to match
 export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
-
 
 # Setup Groovy Path Apr 07 2016
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
@@ -66,3 +74,24 @@ export HISTFILESIZE=100000               # big big history
 
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+export JAVA_10_HOME=$(/usr/libexec/java_home -v10)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+export JAVA_12_HOME=$(/usr/libexec/java_home -v12)
+export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
+export JAVA_14_HOME=$(/usr/libexec/java_home -v14)
+export JAVA_15_HOME=$(/usr/libexec/java_home -v15)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java9='export JAVA_HOME=$JAVA_9_HOME'
+alias java10='export JAVA_HOME=$JAVA_10_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+alias java12='export JAVA_HOME=$JAVA_12_HOME'
+alias java13='export JAVA_HOME=$JAVA_13_HOME'
+alias java14='export JAVA_HOME=$JAVA_14_HOME'
+alias java15='export JAVA_HOME=$JAVA_15_HOME'
+
+#Project related setup
+ export SPANNER_EMULATOR_HOST=localhost:9010

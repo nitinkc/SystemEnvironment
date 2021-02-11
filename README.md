@@ -91,10 +91,16 @@ When a "non-login shell" starts up, it reads the file "/etc/bashrc" and then the
 
 #Semlink the files to be consistent with further edits
 ```sh
-ln -s .bash_aliases ~
-ln -s .bash_profile ~
-ln -s .bashrc ~
-ln -s .profile ~
+## Assuming the project is cloned in $HOME/Programming folder on a new mac
+# The following commands will symlink the files and be modified for later use on other macs
+
+# ~ refers to $HOME Directory
+ln -s $HOME/Programming/SystemEnvironment/mac/.my_aliases ~
+ln -s $HOME/Programming/SystemEnvironment/mac/.profile ~
+ln -s $HOME/Programming/SystemEnvironment/mac/.zshrc ~
+
+ln -s mac/.bash_profile ~
+ln -s mac/.bashrc ~
 ```
 
 -> $PATH variable, a list directory names separated by colon (:) characters
