@@ -31,11 +31,6 @@ expected result: /bin/zsh
 
 * Install oh-my-zsh using [this link](https://ohmyz.sh/#install)
 
-##### [Follow This Link](https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb)
-
-##### [Follow this link as well](https://towardsdatascience.com/customising-the-mac-terminal-to-increase-productivity-and-improve-the-interface-894f6d86d573)
-
-##### [detailed link](https://towardsdatascience.com/the-ultimate-guide-to-your-terminal-makeover-e11f9b87ac99)
 ### Install Powerline 10k
 
 ```
@@ -120,3 +115,13 @@ ln -s $HOME/Programming/SystemEnvironment/mac/.bash_profile ~
 ### Adding in a Permanent Location
 create a .bash_profile or .profile file in the home directory and set the path in the files as.
 `sh export PATH="/usr/local/<my_package>/bin:$PATH" `
+
+
+
+## References
+
+[Follow This Link](https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb)
+
+[Follow this link as well](https://towardsdatascience.com/customising-the-mac-terminal-to-increase-productivity-and-improve-the-interface-894f6d86d573)
+
+[detailed link](https://towardsdatascience.com/the-ultimate-guide-to-your-terminal-makeover-e11f9b87ac99)
