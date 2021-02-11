@@ -99,22 +99,23 @@ ln -s $HOME/Programming/SystemEnvironment/mac/.my_aliases ~
 ln -s $HOME/Programming/SystemEnvironment/mac/.profile ~
 ln -s $HOME/Programming/SystemEnvironment/mac/.zshrc ~
 
-ln -s mac/.bash_profile ~
-ln -s mac/.bashrc ~
+#Keep these two for the Terminal (incase iTerm is not to be used)
+ln -s $HOME/Programming/SystemEnvironment/mac/.bashrc ~
+ln -s $HOME/Programming/SystemEnvironment/mac/.bash_profile ~
 ```
 
--> $PATH variable, a list directory names separated by colon (:) characters
--> The superuser has /sbinand /usr/sbin entries for easily executing system administration commands.
+* $PATH variable, a list directory names separated by colon (:) characters
+* The superuser has /sbinand /usr/sbin entries for easily executing system administration commands.
 
 
 #OS X: Change your PATH environment variable
 
-###Setting Temporary Environmental Variables in OS X
+### Setting Temporary Environmental Variables in OS X
 `export PATH=$PATH:~/bin`
 
-###Adding a Temporary Location
+### Adding a Temporary Location
 `PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin`
 
-###Adding in a Permanent Location
+### Adding in a Permanent Location
 create a .bash_profile or .profile file in the home directory and set the path in the files as.
 `sh export PATH="/usr/local/<my_package>/bin:$PATH" `
