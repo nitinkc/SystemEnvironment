@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/nichaurasia/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 #ZSH_THEME="agnoster"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -24,7 +24,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-ZSH_DISABLE_COMPFIX=true 
+ZSH_DISABLE_COMPFIX=true
 
 # Load the default .profile (all PATHS are in .Profile)
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
@@ -32,6 +32,7 @@ ZSH_DISABLE_COMPFIX=true
 if [ -f ~/.my_aliases ]; then
 . ~/.my_aliases
 fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nichaurasia/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nichaurasia/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -44,7 +45,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=time
 POWERLEVEL9K_TIME_BACKGROUND=green
 
-# Add a new line after the global prompt 
+# Add a new line after the global prompt
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Change the git status to red when something isn't committed and pushed
@@ -74,7 +75,7 @@ fi
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
 
 # Colorise the top Tabs of Iterm2 with the same color as background
-# Just change the 18/26/33 wich are the rgb values 
+# Just change the 18/26/33 wich are the rgb values
 #echo -e "\033]6;1;bg;red;brightness;18\a"
 #echo -e "\033]6;1;bg;green;brightness;26\a"
 #echo -e "\033]6;1;bg;blue;brightness;33\a"
@@ -169,5 +170,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-
