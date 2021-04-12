@@ -143,8 +143,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Add wisely, as too many plugins slow down shell startup.
 
 # Setting up the Prompt - Dir Path on top line and Prompt in the immediate next
-#export PS1="**[\d \$(date +%k:%M:%S)]**\[\e[0;34m\]\w\[\e[0m\]\n[$] "
-#export PS1="\u@\w $"
+# export PS1="**[\d \$(date +%k:%M:%S)]**\[\e[0;34m\]\w\[\e[0m\]\n[$] "
+# export PS1="\u@\w $"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -170,3 +170,19 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/nichaurasia/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/nichaurasia/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nichaurasia/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/nichaurasia/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

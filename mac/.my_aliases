@@ -83,3 +83,8 @@ alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper
 # weather (curl wttr.in/:help to check the arguments)
 alias weather0='curl wttr.in/Nashville\?0nqF'
 alias weather='curl wttr.in/Nashville\?nqF'
+
+
+alias gcpLocal='gcloud config configurations activate local'
+alias gcpNitin='gcloud config configurations activate learn'
+
