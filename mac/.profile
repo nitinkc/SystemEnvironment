@@ -50,6 +50,12 @@ export PATH=$GROOVY_HOME/bin:$PATH
 export LIQUIBASE_HOME=/usr/local/opt/liquibase
 export PATH=$LIQUIBASE_HOME/:$PATH
 
+export GOPATH=/usr/local/go
+export PATH=$GOPATH/bin:$PATH
+
+export X=$GOPATH/bin/harbourbridge
+export PATH=$X/bin:$PATH
+
 # FINALLY CLUB ALL PATHS TOGETHER AND SET THE FINAL PATH VARIABLE
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
