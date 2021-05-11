@@ -125,3 +125,5 @@ create a .bash_profile or .profile file in the home directory and set the path i
 [Follow this link as well](https://towardsdatascience.com/customising-the-mac-terminal-to-increase-productivity-and-improve-the-interface-894f6d86d573)
 
 [detailed link](https://towardsdatascience.com/the-ultimate-guide-to-your-terminal-makeover-e11f9b87ac99)
+
+https://stevenvanbael.com/profiling-zsh-startup
