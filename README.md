@@ -16,17 +16,19 @@
 .bash_profile ->  login shell
 .bashrc -> non-login shell.
 
-When you start a sub-shell (by typing a shell's name at the command-prompt), you get a "non-login shell".
 
-When a "login shell" starts up, it reads the file
-
-"/etc/profile" and
-then "~/.bash_profile" or "~/.bash_login" or "~/.profile"
+* When a "login shell" starts up, it reads the file
+	* /etc/profile and
+	* then ~/.bash_profile or ~/.bash_login or ~/.profile
 (whichever one exists - it only reads one of these, checking for them in the order mentioned).
+
+
+* When you start a sub-shell (by typing a shell's name at the command-prompt), you get a "non-login shell".
 
 When a "non-login shell" starts up, it reads the file "/etc/bashrc" and then the file "~/.bashrc".
 
 #Semlink the files to be consistent with further edits
+
 Assuming the project is cloned in $HOME/Programming folder on a new mac
 
 The following commands will symlink the files and be modified for later use on other macs
@@ -45,7 +47,7 @@ ln -s $HOME/Programming/SystemEnvironment/mac/.bash_profile ~
 * The superuser has /sbinand /usr/sbin entries for easily executing system administration commands.
 
 
-#OS X: Change your PATH environment variable
+# OS X: Change your PATH environment variable
 
 ### Setting Temporary Environmental Variables in OS X
 `export PATH=$PATH:~/bin`
