@@ -1,17 +1,17 @@
 # System Environment
 
-Global settings:
-`
+### Global settings:
+```sh
 /etc/profile
 /etc/bashrc
-`
+```
 
-Personal settings:
-`
+### Personal settings:
+```sh
 ~/.bash_profile OR  ~/.bash_login OR ~/.profile
 ~/.bashrc
 ~/.bash_aliases
-`
+```
 
 .bash_profile ->  login shell
 .bashrc -> non-login shell.
@@ -19,6 +19,7 @@ Personal settings:
 When you start a sub-shell (by typing a shell's name at the command-prompt), you get a "non-login shell".
 
 When a "login shell" starts up, it reads the file
+
 "/etc/profile" and
 then "~/.bash_profile" or "~/.bash_login" or "~/.profile"
 (whichever one exists - it only reads one of these, checking for them in the order mentioned).
