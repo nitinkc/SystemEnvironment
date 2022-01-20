@@ -7,6 +7,7 @@
 ```
 
 ### Personal settings:
+
 ```sh
 ~/.bash_profile OR  ~/.bash_login OR ~/.profile
 ~/.bashrc
@@ -20,14 +21,14 @@
 * When a "login shell" starts up, it reads the file
 	* /etc/profile and
 	* then ~/.bash_profile or ~/.bash_login or ~/.profile
-(whichever one exists - it only reads one of these, checking for them in the order mentioned).
+(*whichever one exists - it only reads one of these, checking for them in the order mentioned*).
 
 
 * When you start a sub-shell (by typing a shell's name at the command-prompt), you get a "non-login shell".
+	*When a "non-login shell" starts up, it reads the file "/etc/bashrc" and then the file "~/.bashrc".
 
-When a "non-login shell" starts up, it reads the file "/etc/bashrc" and then the file "~/.bashrc".
 
-#Semlink the files to be consistent with further edits
+# Semlink the files to be consistent with further edits
 
 Assuming the project is cloned in $HOME/Programming folder on a new mac
 
