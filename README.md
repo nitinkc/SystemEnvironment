@@ -1,65 +1,5 @@
 # System Environment
 
-## Setting Mac Terminal environment for Development
-
-### Unix shell and Framework installation
-
-Between iTerm and Hyper, iTerm is preferred here. Download and install iTerm
-```
-brew cask install iterm2
-```
-
-Instead of using the Mac default Bash shell, preferred here is zsh with multiple plugin support.
-
-* Install latest version of zsh using brew and verify the version.
-
-```
-brew install zsh zsh-completions
-zsh --version
-```
-
-* Make zsh as system’s default shell
-```
-chsh -s $(which zsh)
-```
-* Verify:
-
-```
-echo $SHELL
-expected result: /bin/zsh
-```
-
-* Install oh-my-zsh using [this link](https://ohmyz.sh/#install)
-
-### Install Powerline 10k
-
-```
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-```
-Run either
-```
-p10k configure
-```
-OR
-
-Edit ~/.zshrc and set ZSH_THEME="powerlevel10k/powerlevel10k".
-
-
-### Install plugins
-
-* [Auto suggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
-
-* [Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
-
-* [Zsh Completions](https://github.com/zsh-users/zsh-completions/#Manual%20installation)
-
-* [Zsh history substring](https://github.com/zsh-users/zsh-history-substring-search)
-
-* [Zsh Apple touchbar](https://github.com/zsh-users/zsh-apple-touchbar)
-```
-brew install zsh-syntax-highlighting
-```
-
 Global settings:
 `
 /etc/profile
@@ -116,14 +56,5 @@ ln -s $HOME/Programming/SystemEnvironment/mac/.bash_profile ~
 create a .bash_profile or .profile file in the home directory and set the path in the files as.
 `sh export PATH="/usr/local/<my_package>/bin:$PATH" `
 
-
-
-## References
-
-[Follow This Link](https://medium.com/swlh/power-up-your-terminal-using-oh-my-zsh-iterm2-c5a03f73a9fb)
-
-[Follow this link as well](https://towardsdatascience.com/customising-the-mac-terminal-to-increase-productivity-and-improve-the-interface-894f6d86d573)
-
-[detailed link](https://towardsdatascience.com/the-ultimate-guide-to-your-terminal-makeover-e11f9b87ac99)
-
-https://stevenvanbael.com/profiling-zsh-startup
+### Setting up iTerm
+[iTerm Congiguration with PowerLine10K](https://nitinkc.github.io/developer%20tools/iTerm-zsh-mac/)

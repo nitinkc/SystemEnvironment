@@ -77,8 +77,9 @@ export HISTFILESIZE=100000               # big big history
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
+#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+#alias java8='export JAVA_HOME=$JAVA_8_HOME'
+#export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 alias java11='export JAVA_HOME=$JAVA_11_HOME'

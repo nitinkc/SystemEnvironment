@@ -55,9 +55,6 @@ fixlines () {
 # Maven Clean
 alias mvnClean='mvn clean eclipse:eclipse -Dwtpversion=2.0'
 
-# JBoss Server Start
-alias startJboss='cd /usr/local/jboss-6.0.0.Final/bin ; ./run.sh'
-
 # All ports occupied
 alias ports='lsof -i -P | grep -i "listen"'
 
@@ -84,7 +81,13 @@ alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper
 alias weather0='curl wttr.in/Nashville\?0nqF'
 alias weather='curl wttr.in/Nashville\?nqF'
 
-
 alias gcpLocal='gcloud config configurations activate local'
 alias gcpNitin='gcloud config configurations activate learn'
 
+# brew install pipes-sh
+# pipes.sh -h
+alias pipes='pipes.sh -p4 -t2'
+
+# brew install cmatrix
+# run cmatrix
+alias matrix='cmatrix'
