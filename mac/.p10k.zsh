@@ -37,7 +37,18 @@
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
-    newline                 # \n
+    # newline                 # \n
+    prompt_char             # prompt symbol
+    # newline
+    # =========================[ Line #2 ]=========================
+    newline
+    ip                    # ip address and bandwidth usage for a specified network interface
+    # public_ip             # public IP address
+    # proxy                 # system-wide http/https/ftp proxy
+    battery               # internal battery
+    wifi                  # wifi speed
+    # example               # example user-defined segment (see prompt_example fun
+    newline
     prompt_char             # prompt symbol
   )
 
@@ -127,7 +138,7 @@
   # Or for a specific segment in specific state:
   #
   #   POWERLEVEL9K_DIR_NOT_WRITABLE_ICON_BEFORE_CONTENT=false
-  typeset -g POWERLEVEL9K_ICON_BEFORE_CONTENT=
+  typeset -g POWERLEVEL9K_ICON_BEFORE_CONTENT=true
 
   # Add an empty line before each prompt.
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
