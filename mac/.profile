@@ -20,8 +20,7 @@ export M2_HOME=/usr/local/Cellar/maven/3.6.3_1
 export PATH=$PATH:$M2_HOME/bin
 
 # Gradle Path
-export GRADLE_HOME=/Applications/devTools/gradle-6.6.1
-#export GRADLE_HOME=/usr/local/Cellar/gradle/6.7
+export GRADLE_HOME=/usr/local/Cellar/gradle@6/6.9.2
 export PATH=$PATH:$GRADLE_HOME/bin
 
 # Load RVM into a shell session *as a function*
@@ -68,14 +67,13 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
 # gets added in the /usr/local
 
 # History of commands of History
-HISTFILESIZE=2500
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 #shopt -s histappend                      # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 #export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 #alias java8='export JAVA_HOME=$JAVA_8_HOME'
