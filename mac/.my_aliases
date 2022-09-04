@@ -67,10 +67,10 @@ alias myip2='curl ifconfig.me'
 alias src='source ~/.bash_profile'
 
 # some more ls aliases
-alias ls='ls -GFh'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+#alias ls='ls -GFh'
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
@@ -90,4 +90,4 @@ alias pipes='pipes.sh -p4 -t2'
 
 # brew install cmatrix
 # run cmatrix
-alias matrix='cmatrix'
+alias matrix='cmatrix -ba -u 2 -C red'

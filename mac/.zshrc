@@ -9,11 +9,18 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 #git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# Set CLICOLOR if you want Ansi Colors in iTerm2 
+#export CLICOLOR=1
+
+# Set colors to match iTerm2 Terminal Colors
+#export TERM=xterm-256color
 
 plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+    git autojump brew
+    sublime
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -68,7 +75,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 #zprof
-
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa"
     alias la="exa --long --all --group"
