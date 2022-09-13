@@ -5,6 +5,7 @@
 # chmod +x .git/hooks/pre-commit
 
 SPECIAL_BRANCH='master|develop|main'
+PROTECTED_BRANCHES="^(master|dev|release-*|bugfix-*)"
 BUGFIX_REGEX=^[bR]+ugfix/[a-zA-Z]+[0-9]+$
 RELEASE_REGEX=^[rR]+elease/[a-zA-Z]+[0-9]+$ #Could be Release/r16 or release/r16
 CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
