@@ -1,19 +1,12 @@
 #!/bin/bash
 
-DIR=/Users/nichaurasia/Documents/ClonedCode
+#DIR=/Users/nichaurasia/Documents/ClonedCode
+DIR=/Users/nichaurasia/Downloads/test
 DIRS=$(find $DIR -name "*.git")
-echo "$DIRS"
-#find "$DIR" -type d |
-#find "$DIR" -name \*.git
-#while read d;
-#do
-#    files=$(ls -t "$d" | sed -n '1h; $ { s/\n/,/g; p }')
-#    printf '%s,%s\n' "$files";
-#done
-#
-#exit 0
 
+# Copy the pre-commit hook to all the Code cloned into DIR variable
 for dest in $DIRS; do
-  #cp -v pre-commit "$dest/hooks"
-  echo "$dest/hooks"
+  curl -fL -o "$dest/hooks/pre-commit" https://raw.githubusercontent.com/nitinkc/SystemEnvironment/master/gitHooks/pre-commit
+  chmod +x "$dest/hooks/pre-commit"
+  stat -f "%A %Sp %N" "$dest/hooks/pre-commit" #works on MacOS
 done
