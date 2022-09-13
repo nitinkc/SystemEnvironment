@@ -1,13 +1,14 @@
 #!/bin/bash
 # Prevents accidental commits to defined Branches.
 # Install: use copy_hooks.sh script to place the precommit file into all the Codes from Repo
-# curl -fL -o .git/hooks/pre-commit https://gist.githubusercontent.com/stefansundin/9059706/raw/pre-commit
+# curl -fL -o .git/hooks/pre-commit https://raw.githubusercontent.com/nitinkc/SystemEnvironment/master/gitHooks/pre-commit
 # chmod +x .git/hooks/pre-commit
 
 SPECIAL_BRANCH='master|develop|main'
 BUGFIX_REGEX=^[bR]+ugfix/[a-zA-Z]+[0-9]+$
 RELEASE_REGEX=^[rR]+elease/[a-zA-Z]+[0-9]+$ #Could be Release/r16 or release/r16
-CURRENT_BRANCH='release/r16'
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+#'release/r16'
 
 if [[ "$CURRENT_BRANCH" =~ (SPECIAL_BRANCH) ]]; then
   echo >&2 "Preventing commit on $CURRENT_BRANCH branch"
