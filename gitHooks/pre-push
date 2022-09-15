@@ -5,7 +5,7 @@ NAME=$(printf '%s\n' "${AUTHORINFO}" | sed -n 's/^\(.*\) <.*$/\1/p')
 EMAIL=$(printf '%s\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
 
 echo "Name and email for this commit: ${NAME}<${EMAIL}>"
-if [[ "${EMAIL}" == "gs.nitin@gmail.com" ]]; then
+if [ "${EMAIL}" =~ "gs.nitin@gmail.com" ]; then
   echo >&2 "Please commit using Enterprise ID instead of personal name ${NAME} and email <${EMAIL}>":
 fi
 exit 1
