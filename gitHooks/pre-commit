@@ -11,7 +11,7 @@ RELEASE_REGEX=^[rR]+elease/[a-zA-Z]+[0-9]+$ #Could be Release/r16 or release/r16
 CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 #'release/r16'
 
-if [[ "$CURRENT_BRANCH" =~ (SPECIAL_BRANCH) ]]; then
+if [[ "$CURRENT_BRANCH" =~ ($SPECIAL_BRANCH) ]]; then
   echo >&2 "Preventing commit on $CURRENT_BRANCH branch"
   echo >&2 "commit with -n switch to bypass the pre-commit hook."
   echo >&2 "Hooks at Repo would prevent push directly to such branch"
