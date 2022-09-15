@@ -1,11 +1,14 @@
 #!/bin/bash
 
-#DIR=/Users/nichaurasia/Documents/ClonedCode
-DIR=/Users/nichaurasia/Downloads/test
+DIR=/Users/nichaurasia/Documents/ClonedCode
+#DIR=/Users/nichaurasia/Downloads/test
 DIRS=$(find $DIR -name "*.git")
 
 # Copy the pre-commit hook to all the Code cloned into DIR variable
 for dest in $DIRS; do
+  rm -fv "$dest/hooks/pre-commit"
+  rm -fv "$dest/hooks/pre-push"
+
   curl -fL -o "$dest/hooks/pre-commit" https://raw.githubusercontent.com/nitinkc/SystemEnvironment/master/gitHooks/pre-commit
   chmod +x "$dest/hooks/pre-commit"
 
