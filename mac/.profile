@@ -1,6 +1,6 @@
 # In any New System, change the paths of these ENV Variables
 # Setting JAVA_HOME
-#Picks up heighest Java from /Library/Java/JavaVirtualMachines path
+#Picks up highest Java from /Library/Java/JavaVirtualMachines path
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
 #Manually setting up the Java 1.8 due to Projects requirements
@@ -94,3 +94,7 @@ alias java11='export JAVA_HOME=$JAVA_11_HOME'
 # alias java14='export JAVA_HOME=$JAVA_14_HOME'
 # export JAVA_15_HOME=$(/usr/libexec/java_home -v15)
 # alias java15='export JAVA_HOME=$JAVA_15_HOME'
+
+if [ -f ~/.my_aliases ]; then
+. ~/.my_aliases
+fi

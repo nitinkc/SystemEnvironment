@@ -79,3 +79,8 @@ if [ -x "$(command -v exa)" ]; then
     alias ls="exa"
     alias la="exa --long --all --group"
 fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nichaurasia/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nichaurasia/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nichaurasia/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nichaurasia/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
