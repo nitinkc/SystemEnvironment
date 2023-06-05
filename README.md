@@ -61,4 +61,20 @@ create a .bash_profile or .profile file in the home directory and set the path i
 `sh export PATH="/usr/local/<my_package>/bin:$PATH" `
 
 ### Setting up iTerm
-[iTerm Congiguration with PowerLine10K](https://nitinkc.github.io/developer%20tools/iTerm-zsh-mac/)
+[iTerm Configuration with PowerLine10K](https://nitinkc.github.io/developer%20tools/iterm2-zsh-config/)
+
+
+### While using zsh
+
+the following order of files load upon 
+
+/etc/zshenv    # Read for every shell
+~/.zshenv      # Read for every shell except ones started with -f
+/etc/zprofile  # Global config for login shells, read before zshrc
+~/.zprofile    # User config for login shells
+/etc/zshrc     # Global config for interactive shells
+~/.zshrc       # User config for interactive shells
+/etc/zlogin    # Global config for login shells, read after zshrc
+~/.zlogin      # User config for login shells
+~/.zlogout     # User config for login shells, read upon logout
+/etc/zlogout   # Global config for login shells, read after user logout file
