@@ -55,9 +55,13 @@ export PATH=$GOPATH/bin:$PATH
 export X=$GOPATH/bin/harbourbridge
 export PATH=$X/bin:$PATH
 
+export GCP_PATH = ~/Development/google-cloud-sdk
+export PATH=$PATH:$GCP_PATH/bin
+
 # FINALLY CLUB ALL PATHS TOGETHER AND SET THE FINAL PATH VARIABLE
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
+
 
 # Setting Sublime as default editor for the all the text files (Do in ~/bash_profile)
 # ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
@@ -82,18 +86,6 @@ export HISTFILESIZE=100000               # big big history
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
-# export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
-# alias java9='export JAVA_HOME=$JAVA_9_HOME'
-# export JAVA_10_HOME=$(/usr/libexec/java_home -v10)
-# alias java10='export JAVA_HOME=$JAVA_10_HOME'
-# export JAVA_12_HOME=$(/usr/libexec/java_home -v12)
-# alias java12='export JAVA_HOME=$JAVA_12_HOME'
-# export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
-# alias java13='export JAVA_HOME=$JAVA_13_HOME'
-# export JAVA_14_HOME=$(/usr/libexec/java_home -v14)
-# alias java14='export JAVA_HOME=$JAVA_14_HOME'
-# export JAVA_15_HOME=$(/usr/libexec/java_home -v15)
-# alias java15='export JAVA_HOME=$JAVA_15_HOME'
 
 if [ -f ~/.my_aliases ]; then
 . ~/.my_aliases
