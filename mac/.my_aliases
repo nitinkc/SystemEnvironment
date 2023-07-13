@@ -1,3 +1,5 @@
+echo "Reading .my_aliases file ...."
+
 alias myAlias='subl ~/.my_aliases'
 alias c='clear'
 

@@ -1,25 +1,18 @@
+echo "Reading .bash_profile file ...."
+
 # .bash_profile ->  login shell
 # Invoked as an interactive login shell: First reads and executes commands from the file /etc/profile, if it exists.
 # Then it looks for ~/.bash_profile, ~/.bash_login, and ~/.profile, in that order,
 # and reads and executes commands from the first one that exists and is readable.
 
-# If you configure .bash_profile, no need to configure .profile
-# To use a .profile, need to include the source ~/.profile in .bash_profile so that the .profile file is read
+# If you configure .bash_profile, no need to configure .profile
+# To use a .profile, need to include the source ~/.profile in .bash_profile so that the .profile file is read
 
 # Load the default .profile
+
+#-s is a file test operator for checking if a file exists and has a non-zero size )
+# The && (AND operation) ensures that the next command is executed only if the previous command (the file test) evaluates to true.
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
-
-#sourcing .bashrc from .bash_profile, Just to be on the safer side
-[[ -s ~/.bashrc ]] && source ~/.bashrc
-
-
-# Adding aliases from a separate file
-# . ~/.bash_aliases will source (load) aliases in the context of the currently running shell.
-# The advantage of having all aliases in one file : easier to re-load them when changes are made.
-if [ -f ~/.my_aliases ]; then
-. ~/.my_aliases
-fi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
