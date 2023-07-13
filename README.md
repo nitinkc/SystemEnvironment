@@ -3,7 +3,7 @@
 
 
 
-### Setting up iTerm
+### Setting up Mac Profile and Terminal
 
 [Mac Config](https://nitinkc.github.io/developer%20tools/macbook-configurations/)
 

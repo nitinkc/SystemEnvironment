@@ -112,7 +112,19 @@ cask "firefox"
 cask "font-fira-code"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
+# Open source relational database management system
+brew "mysql"
 # Visual tool to design, develop and administer MySQL servers
 cask "mysqlworkbench"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
+# Shell extension to jump to frequently used directories
+brew "autojump"
+# Data loading tool for PostgreSQL
+brew "pgloader"
+# Developer targeted fonts with a high number of glyphs
+cask "font-fira-code-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
