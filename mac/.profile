@@ -75,13 +75,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
-# Setting Sublime as default editor for the all the text files (Do in ~/bash_profile)
-# ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-#export EDITOR=`subl -w`
-
-# Node Package Manager
-# gets added in the /usr/local
-
 # History of commands of History
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
@@ -93,3 +86,10 @@ export HISTFILESIZE=100000               # big big history
 
 # Reduced Syntax 
 test -e ~/.my_aliases  && . ~/.my_aliases || echo "File '$HOME/.my_aliases' is not present. Please Symlink the file"
+
+# Forcing exa to execute on ls commands
+if [ -x "$(command -v exa)" ]; then
+	alias ll="exa --icons --long --header"; 
+	alias la="exa --long --all --group";
+	echo "checking EXA"
+fi

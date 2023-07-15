@@ -76,7 +76,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(aliases autojump zsh-autosuggestions zsh-syntax-highlighting)
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -114,16 +114,5 @@ source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '${HOME}/Development/google-cloud-sdk/path.zsh.inc' ]; 
-  then . '${HOME}/Development/google-cloud-sdk/path.zsh.inc'; 
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '${HOME}/Development/google-cloud-sdk/completion.zsh.inc' ]; 
-  then . '${HOME}/Development/google-cloud-sdk/completion.zsh.inc'; 
-fi
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
