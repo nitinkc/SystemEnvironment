@@ -1,6 +1,6 @@
-echo "Reading .my_aliases file ...."
+echo "Loading .my_aliases file ...."
 
-alias myAlias='subl ~/.my_aliases'
+alias myAlias='open ~/.my_aliases'
 alias c='clear'
 
 # Show/Hide Hidden Files in Mac
@@ -44,7 +44,7 @@ alias res='sudo systemsetup -setrestartfreeze on'
 # Change Screenshot File Type
 alias screenShotType='defaults write com.apple.screencapture type -string "png"'
 # Change Screenshot Location
-alias screenTypeDir='defaults write com.apple.screencapture location /Users/nitin/Downloads'
+alias screenTypeDir='defaults write com.apple.screencapture location $HOME/Downloads'
 
 
 # Convert file from some other system that has foreign line-endings into "Unix" line-endings by running this Perl command:
@@ -68,20 +68,14 @@ alias myip2='curl ifconfig.me'
 
 alias src='source ~/.bash_profile'
 
-# some more ls aliases
-#alias ls='ls -GFh'
-#alias ll='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+alias zshconfig="open ~/.zshrc"
+alias ohmyzsh="open ~/.oh-my-zsh/oh-my-zsh.sh"
 
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 
 # weather (curl wttr.in/:help to check the arguments)
-alias weather0='curl wttr.in/Nashville\?0nqF'
-alias weather='curl wttr.in/Nashville\?nqF'
+alias myweather='curl wttr.in/Denver\?0nqF'
+alias weather='curl wttr.in/Denver\?nqF'
 
 alias gcpLocal='gcloud config configurations activate local'
 alias gcpNitin='gcloud config configurations activate learn'

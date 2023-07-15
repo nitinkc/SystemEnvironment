@@ -1,4 +1,4 @@
-echo "Reading .profile file ...."
+echo "Loading .profile file ...."
 # In any New System, change the paths of these ENV Variables
 
 # Setting Maven Home
@@ -40,8 +40,10 @@ export PATH=$X/bin:$PATH
 export GCP_PATH=${HOME}/Development/google-cloud-sdk
 export PATH=$PATH:$GCP_PATH/bin
 
-export CLOUDSDK_PYTHON=/usr/local/bin/python3
+export CLOUDSDK_PYTHON=/usr/local/bin/python3.11
 export PATH=$PATH:$CLOUDSDK_PYTHON
+
+# Setting JAVA_HOME
 
 # IntelliJ takes care of Java PATH from the IDE settings
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home
@@ -50,14 +52,12 @@ export PATH=$PATH:$JAVA_HOME/bin
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
-#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-#alias java8='export JAVA_HOME=$JAVA_8_HOME'
-#export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 
-
-# Setting JAVA_HOME
 #Picks up highest Java from /Library/Java/JavaVirtualMachines path
-#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 #Manually setting up the Java 1.8 due to Projects requirements
 # By default, every time the terminal loads, JAVA 8 gets set in priority.
@@ -91,13 +91,5 @@ export HISTFILESIZE=100000               # big big history
 # Save and reload the history after each command finishes
 # export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# Adding aliases from a separate file
-# . ~/.bash_aliases will source (load) aliases in the context of the currently running shell.
-# The advantage of having all aliases in one file : easier to re-load them when changes are made.
-
-
-# The dot (.) is a special command in Bash that is used to "source" or include the content of another file into the current script
-# -f is a file test operator for checking if a file exists and is a regular file
-if [ -f ~/.my_aliases ]; 
-	then . ~/.my_aliases
-fi
+# Reduced Syntax 
+test -e ~/.my_aliases  && . ~/.my_aliases || echo "File '$HOME/.my_aliases' is not present. Please Symlink the file"
