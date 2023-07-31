@@ -16,3 +16,7 @@ if [ -f '${HOME}/Development/google-cloud-sdk/completion.zsh.inc' ];
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
+
+export OPENAI_API_KEY=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

@@ -89,3 +89,5 @@ alias pipes='pipes.sh -p4 -t2'
 alias matrix='cmatrix -ba -u 2 -C red'
 
 alias buou="brew update && brew outdated && brew upgrade && brew cleanup"
+
+alias jpnb="/Applications/anaconda3/bin/jupyter_mac.command ; exit;"
