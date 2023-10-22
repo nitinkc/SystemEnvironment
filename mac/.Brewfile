@@ -132,3 +132,7 @@ cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+cask postman
+cask notion
