@@ -11,3 +11,6 @@
 
 [includeIf "gitdir:~/Programming/"]
 	path = .gitconfig-learn
+
+[init]
+	defaultBranch = main
