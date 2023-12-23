@@ -136,3 +136,5 @@ cask "iterm2"
 cask "dbeaver-community"
 cask postman
 cask notion
+# Multimedia player
+cask "vlc"
