@@ -4,12 +4,32 @@
 # curl -fL -o .git/hooks/pre-commit https://raw.githubusercontent.com/nitinkc/SystemEnvironment/master/gitHooks/pre-commit
 # chmod +x .git/hooks/pre-commit
 
-SPECIAL_BRANCH='master|develop|main'
+
+# Get the current branch name
+current_branch=$(git symbolic-ref --short HEAD)
+# List of branches where commits are restricted
+restricted_branches=("main" "develop" "bugfix")
+
+# Check if the current branch is restricted
+if [[ " ${restricted_branches[@]} " =~ " ${current_branch} " ]]; then
+    echo "Error: Commits to branch '${current_branch}' are not allowed."
+    echo "Using git switch -c new-branch-name to switch to a new branch"
+    
+    # Generate a unique branch name with current date and timestamp
+    new_branch_name="feature/new_branch_$(date +'%Y%m%d_%H%M%S')"
+    echo " switching to the new branch $new_branch_name" 
+    git switch -c $new_branch_name
+    
+    exit 1
+fi
+
+# IF new branch creation is not required, the used the below code
+
+SPECIAL_BRANCH='main|master|develop'
 PROTECTED_BRANCHES="^(master|develop|release-*|bugfix-*)"
 BUGFIX_REGEX=^[bR]+ugfix/[a-zA-Z]+[0-9]+$
 RELEASE_REGEX=^[rR]+elease/[a-zA-Z]+[0-9]+$ #Could be Release/r16 or release/r16
 CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-#'release/r16'
 
 if [[ "$CURRENT_BRANCH" =~ ($SPECIAL_BRANCH) ]]; then
   echo >&2 "Preventing commit on $CURRENT_BRANCH branch"
@@ -24,4 +44,6 @@ elif [[ "$CURRENT_BRANCH" =~ ($RELEASE_REGEX) ]]; then
   exit 1
 fi
 
+
+# If not a restricted branch, allow the commit
 exit 0
