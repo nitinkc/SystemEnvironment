@@ -32,7 +32,7 @@ brew "isl"
 # GNU compiler collection
 brew "gcc"
 # GIF image/animation creator/editor
-brew "gifsicle"ß
+brew "gifsicle"
 # SDK for Groovy: a Java-based scripting language
 brew "groovysdk"
 # Extendable open-source CI server
@@ -134,7 +134,7 @@ cask "font-hack-nerd-font"
 cask "iterm2"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-cask postman
-cask notion
+cask "postman"
+cask "notion"
 # Multimedia player
 cask "vlc"
