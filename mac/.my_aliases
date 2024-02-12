@@ -95,3 +95,6 @@ alias jpnb="/Applications/anaconda3/bin/jupyter_mac.command ; exit;"
 #Error while opening Intellij IDEA due to an already running process
 #Empty the port.lock file.
 alias intellij="open /Users/nichaurasia/Library/Application\ Support/JetBrains/IdeaIC2023.2/.lock"
+
+alias showQuitFinder='defaults write com.apple.finder QuitMenuItem -bool true; killall Finder'
+alias hideQuitFinder='defaults write com.apple.finder QuitMenuItem -bool false; killall Finder'
