@@ -73,23 +73,8 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # FINALLY CLUB ALL PATHS TOGETHER AND SET THE FINAL PATH VARIABLE
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
-
-
-# History of commands of History
-export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-export HISTSIZE=100000                   # big big history
-export HISTFILESIZE=100000               # big big history
-#shopt -s histappend                      # append to history, don't overwrite it
-
-# Save and reload the history after each command finishes
-# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
+export OPENAI_API_KEY=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
 # Reduced Syntax 
 test -e ~/.my_aliases  && . ~/.my_aliases || echo "File '$HOME/.my_aliases' is not present. Please Symlink the file"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 
-# Forcing exa to execute on ls commands
-if [ -x "$(command -v exa)" ]; then
-	alias ll="exa --icons --long --header"; 
-	alias la="exa --long --all --group";
-	echo "checking EXA"
-fi

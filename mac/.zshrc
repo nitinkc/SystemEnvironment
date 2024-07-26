@@ -133,9 +133,33 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+
+export PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '${HOME}/Development/google-cloud-sdk/path.zsh.inc' ]; 
+  then . '${HOME}/Development/google-cloud-sdk/path.zsh.inc'; 
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '${HOME}/Development/google-cloud-sdk/completion.zsh.inc' ]; 
+  then . '${HOME}/Development/google-cloud-sdk/completion.zsh.inc'; 
+fi
+
+# Load the default .profile. The alias are read from profile
+[[ -s "$HOME/.profile" ]] && . "$HOME/.profile" || echo "File '$HOME/.profile' is not present. Please Symlink the file"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

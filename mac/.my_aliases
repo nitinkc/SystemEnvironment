@@ -98,3 +98,9 @@ alias intellij="open /Users/nichaurasia/Library/Application\ Support/JetBrains/I
 
 alias showQuitFinder='defaults write com.apple.finder QuitMenuItem -bool true; killall Finder'
 alias hideQuitFinder='defaults write com.apple.finder QuitMenuItem -bool false; killall Finder'
+
+# ---- Eza (better ls) -----
+alias ls='eza --icons=always'
+alias ll='eza --icons --long --header'
+alias la='eza --long --all --group'
+alias cd="z"
