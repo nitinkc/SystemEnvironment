@@ -5,7 +5,7 @@
 
 ### Setting up Mac Profile and Terminal
 
-[Mac Config](https://nitinkc.github.io/developer%20tools/macbook-configurations/)
+[Mac Config](https://nitinkc.github.io/developer%20tools/macbook/macbook-configurations/)
 
-[Profile settings](https://nitinkc.github.io/developer%20tools/profile-settings/)
+[Profile settings](https://nitinkc.github.io/developer%20tools/macbook/profile-settings/)
 
