@@ -1,2 +1,20 @@
 #!/bin/sh
 echo 'This is a global pre-commit hook'
+SPECIAL_BRANCH='main|master|develop'
+PROTECTED_BRANCHES="^(master|develop|release-*|bugfix-*)"
+BUGFIX_REGEX=^[bR]+ugfix/[a-zA-Z]+[0-9]+$
+RELEASE_REGEX=^[rR]+elease/[a-zA-Z]+[0-9]+$ #Could be Release/r16 or release/r16
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
+if [[ "$CURRENT_BRANCH" =~ ($SPECIAL_BRANCH) ]]; then
+  echo >&2 "Preventing commit on $CURRENT_BRANCH branch"
+  echo >&2 "commit with -n switch to bypass the pre-commit hook."
+  echo >&2 "Hooks at Repo would prevent push directly to such branch"
+  exit 1
+elif [[ "$CURRENT_BRANCH" =~ ($BUGFIX_REGEX) ]]; then
+  echo >&2 "Preventing commit on $CURRENT_BRANCH branch. Commit with -n switch to bypass"
+  exit 1
+elif [[ "$CURRENT_BRANCH" =~ ($RELEASE_REGEX) ]]; then
+  echo >&2 "Preventing commit on $CURRENT_BRANCH branch. Commit with -n switch to bypass"
+  exit 1
+fi
