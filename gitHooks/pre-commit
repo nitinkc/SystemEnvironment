@@ -4,7 +4,9 @@
 # curl -fL -o .git/hooks/pre-commit https://raw.githubusercontent.com/nitinkc/SystemEnvironment/master/gitHooks/pre-commit
 # chmod +x .git/hooks/pre-commit
 
+############################# PREVENT & CHANGE BRANCH ##########################################
 
+## IF TRIED WITH restricted_branches, Create a New Branch and exit
 # Get the current branch name
 current_branch=$(git symbolic-ref --short HEAD)
 # List of branches where commits are restricted
@@ -23,6 +25,8 @@ if [[ " ${restricted_branches[@]} " =~ " ${current_branch} " ]]; then
     exit 1
 fi
 
+############################# PREVENT & EXIT ###################################################
+ 
 # IF new branch creation is not required, the used the below code
 
 SPECIAL_BRANCH='main|master|develop'
