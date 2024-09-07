@@ -74,8 +74,9 @@ alias ohmyzsh="open ~/.oh-my-zsh/oh-my-zsh.sh"
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 
 # weather (curl wttr.in/:help to check the arguments)
-alias myweather='curl wttr.in/Denver\?0nqF'
 alias weather='curl wttr.in/Denver\?nqF'
+alias weather_c='curl wttr.in/Denver\?mqF'
+alias moon='curl wttr.in/moon'
 
 alias gcpLocal='gcloud config configurations activate local'
 alias gcpNitin='gcloud config configurations activate learn'
