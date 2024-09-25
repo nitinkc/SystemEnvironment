@@ -89,8 +89,7 @@ alias pipes='pipes.sh -p4 -t2'
 # run cmatrix
 alias matrix='cmatrix -ba -u 2 -C red'
 
-alias buou="brew update && brew outdated && brew upgrade && brew cleanup"
-#alias buou="brew update && brew doctor && brew outdated && brew upgrade && brew cleanup"
+alias buou="brew update && brew outdated && brew upgrade && brew cleanup && brew autoremove && brew cleanup --prune=all"
 alias gitClean="git remote prune origin && git repack && git prune-packed && git reflog expire --expire=1.month.ago && git gc --aggressive"
 
 alias jpnb="/Applications/anaconda3/bin/jupyter_mac.command ; exit;"
