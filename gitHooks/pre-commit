@@ -1,0 +1,53 @@
+#!/bin/bash
+# Prevents accidental commits to defined Branches.
+# Install: use copy_hooks.sh script to place the precommit file into all the Codes from Repo
+# curl -fL -o .git/hooks/pre-commit https://raw.githubusercontent.com/nitinkc/SystemEnvironment/master/gitHooks/pre-commit
+# chmod +x .git/hooks/pre-commit
+
+############################# PREVENT & CHANGE BRANCH ##########################################
+
+## IF TRIED WITH restricted_branches, Create a New Branch and exit
+# Get the current branch name
+current_branch=$(git symbolic-ref --short HEAD)
+# List of branches where commits are restricted
+restricted_branches=("main" "develop" "bugfix")
+
+# Check if the current branch is restricted
+if [[ " ${restricted_branches[@]} " =~ " ${current_branch} " ]]; then
+    echo "Error: Commits to branch '${current_branch}' are not allowed."
+    echo "Using git switch -c new-branch-name to switch to a new branch"
+    
+    # Generate a unique branch name with current date and timestamp
+    new_branch_name="feature/new_branch_$(date +'%Y%m%d_%H%M%S')"
+    echo " switching to the new branch $new_branch_name" 
+    git switch -c $new_branch_name
+    
+    exit 1
+fi
+
+############################# PREVENT & EXIT ###################################################
+ 
+# IF new branch creation is not required, the used the below code
+
+SPECIAL_BRANCH='main|master|develop'
+PROTECTED_BRANCHES="^(master|develop|release-*|bugfix-*)"
+BUGFIX_REGEX=^[bR]+ugfix/[a-zA-Z]+[0-9]+$
+RELEASE_REGEX=^[rR]+elease/[a-zA-Z]+[0-9]+$ #Could be Release/r16 or release/r16
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
+if [[ "$CURRENT_BRANCH" =~ ($SPECIAL_BRANCH) ]]; then
+  echo >&2 "Preventing commit on $CURRENT_BRANCH branch"
+  echo >&2 "commit with -n switch to bypass the pre-commit hook."
+  echo >&2 "Hooks at Repo would prevent push directly to such branch"
+  exit 1
+elif [[ "$CURRENT_BRANCH" =~ ($BUGFIX_REGEX) ]]; then
+  echo >&2 "Preventing commit on $CURRENT_BRANCH branch. Commit with -n switch to bypass"
+  exit 1
+elif [[ "$CURRENT_BRANCH" =~ ($RELEASE_REGEX) ]]; then
+  echo >&2 "Preventing commit on $CURRENT_BRANCH branch. Commit with -n switch to bypass"
+  exit 1
+fi
+
+
+# If not a restricted branch, allow the commit
+exit 0

@@ -1,4 +1,6 @@
-alias myAlias='subl ~/.my_aliases'
+echo "Loading .my_aliases file ...."
+
+alias myAlias='open ~/.my_aliases'
 alias c='clear'
 
 # Show/Hide Hidden Files in Mac
@@ -42,7 +44,7 @@ alias res='sudo systemsetup -setrestartfreeze on'
 # Change Screenshot File Type
 alias screenShotType='defaults write com.apple.screencapture type -string "png"'
 # Change Screenshot Location
-alias screenTypeDir='defaults write com.apple.screencapture location /Users/nitin/Downloads'
+alias screenTypeDir='defaults write com.apple.screencapture location $HOME/Downloads'
 
 
 # Convert file from some other system that has foreign line-endings into "Unix" line-endings by running this Perl command:
@@ -55,9 +57,6 @@ fixlines () {
 # Maven Clean
 alias mvnClean='mvn clean eclipse:eclipse -Dwtpversion=2.0'
 
-# JBoss Server Start
-alias startJboss='cd /usr/local/jboss-6.0.0.Final/bin ; ./run.sh'
-
 # All ports occupied
 alias ports='lsof -i -P | grep -i "listen"'
 
@@ -65,16 +64,45 @@ alias ports='lsof -i -P | grep -i "listen"'
 alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
 
 alias myip='ifconfig | grep "inet " | grep -v 127.0.0.1'
+alias myip2='curl ifconfig.me'
 
 alias src='source ~/.bash_profile'
 
-# some more ls aliases
-alias ls='ls -GFh'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+alias zshconfig="open ~/.zshrc"
+alias ohmyzsh="open ~/.oh-my-zsh/oh-my-zsh.sh"
 
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
+
+# weather (curl wttr.in/:help to check the arguments)
+alias weather='curl wttr.in/Denver\?nqF'
+alias weather_c='curl wttr.in/Denver\?mqF'
+alias moon='curl wttr.in/moon'
+
+alias gcpLocal='gcloud config configurations activate local'
+alias gcpNitin='gcloud config configurations activate learn'
+
+# brew install pipes-sh
+# pipes.sh -h
+alias pipes='pipes.sh -p4 -t2'
+
+# brew install cmatrix
+# run cmatrix
+alias matrix='cmatrix -ba -u 2 -C red'
+
+alias buou="brew update && brew outdated && brew upgrade && brew cleanup && brew autoremove && brew cleanup --prune=all"
+alias gitClean="git remote prune origin && git repack && git prune-packed && git reflog expire --expire=1.month.ago && git gc --aggressive"
+
+alias jpnb="/Applications/anaconda3/bin/jupyter_mac.command ; exit;"
+
+#Error while opening Intellij IDEA due to an already running process
+#Empty the port.lock file.
+alias intellij="open /Users/nichaurasia/Library/Application\ Support/JetBrains/IdeaIC2023.2/.lock"
+
+alias showQuitFinder='defaults write com.apple.finder QuitMenuItem -bool true; killall Finder'
+alias hideQuitFinder='defaults write com.apple.finder QuitMenuItem -bool false; killall Finder'
+
+# ---- Eza (better ls) -----
+alias ls='eza --icons=always'
+alias ll='eza --icons --long --header'
+alias la='eza --long --all --group'
+alias cd="z"

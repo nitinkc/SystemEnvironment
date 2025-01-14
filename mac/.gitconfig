@@ -1,0 +1,34 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+
+[includeIf "gitdir:~/clonedCode/"]
+	path = .gitconfig-work
+
+[includeIf "gitdir:~/Programming/"]
+	path = .gitconfig-learn
+
+[init]
+	defaultBranch = main
+	templatedir = ~/.git-templates
+[commit]
+	template = ~/.git-templates/.gitmessage
+[alias]
+	co = checkout
+	fpush = push
+	cleanup = !git remote prune origin && git repack && git prune-packed && git reflog expire --expire=1.month.ago && git gc --aggressive
+[column]
+	ui = auto
+[maintenance]
+	repo = /Users/nichaurasia/Programming/nitinkc.github.io
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Development/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
