@@ -106,3 +106,13 @@ alias ls='eza --icons=always'
 alias ll='eza --icons --long --header'
 alias la='eza --long --all --group'
 alias cd="z"
+
+brew_setup() {
+  eval "$(homebrew/bin/brew shellenv)"
+  brew update --force --quiet
+  chmod -R go-w "$(brew --prefix)/share/zsh"
+}
+alias brewfix='brew_setup'
+
+alias nats-server='~/DevTools/nats-server'
+alias nats-server-js='~/DevTools/nats-server -js'
