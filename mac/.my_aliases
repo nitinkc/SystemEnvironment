@@ -1,5 +1,3 @@
-echo "Loading .my_aliases file ...."
-
 alias myAlias='open ~/.my_aliases'
 alias c='clear'
 
@@ -57,11 +55,6 @@ fixlines () {
 # Maven Clean
 alias mvnClean='mvn clean eclipse:eclipse -Dwtpversion=2.0'
 
-# All ports occupied
-alias ports='lsof -i -P | grep -i "listen"'
-
-# is8080 Occupied
-alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
 
 alias myip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias myip2='curl ifconfig.me'
@@ -105,14 +98,16 @@ alias hideQuitFinder='defaults write com.apple.finder QuitMenuItem -bool false; 
 alias ls='eza --icons=always'
 alias ll='eza --icons --long --header'
 alias la='eza --long --all --group'
-alias cd="z"
 
-brew_setup() {
-  eval "$(homebrew/bin/brew shellenv)"
-  brew update --force --quiet
-  chmod -R go-w "$(brew --prefix)/share/zsh"
-}
-alias brewfix='brew_setup'
+alias mymac='fastfetch'
 
-alias nats-server='~/DevTools/nats-server'
-alias nats-server-js='~/DevTools/nats-server -js'
+alias hidePrompt="p10k display '*/dir'=hide '*/right/*'=hide"
+alias showPrompt="p10k display '*'=show"
+
+# All ports occupied
+alias ports='lsof -i -P | grep -i "listen"'
+
+# is8080 Occupied
+alias is8080='lsof -i 4tcp:8080 -sTCP:LISTEN'
+
+alias closeAllPorts="lsof -iTCP -sTCP:LISTEN -P -n | awk 'NR>1 && \$1 !~ /^(rapportd|ControlCe|idea|cef_serve|Devin|language_|full-line)/ {print \$2}' | sort -u | xargs kill -9 2>/dev/null"

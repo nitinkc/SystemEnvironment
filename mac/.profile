@@ -1,4 +1,7 @@
-echo "Loading .profile file ...."
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/nichaurasia/.docker/bin"
+# End of Docker Desktop section.
+
 # In any New System, change the paths of these ENV Variables
 
 # Setting Maven Home
@@ -31,8 +34,9 @@ export PATH=$GROOVY_HOME/bin:$PATH
 export LIQUIBASE_HOME=/usr/local/opt/liquibase
 export PATH=$LIQUIBASE_HOME/:$PATH
 
-export GOPATH=/usr/local/go
-export PATH=$GOPATH/bin:$PATH
+# GOROOT is the Go toolchain install (/usr/local/go); GOPATH is your workspace
+export GOPATH=$HOME/go
+export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 
 export X=$GOPATH/bin/harbourbridge
 export PATH=$X/bin:$PATH
@@ -68,13 +72,30 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 #export ANDROID_HOME=/Applications/a.Development/android-sdk-macosx
 #export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME
 #export PATH=$PATH:/Users/nitin/Library/Android/sdk/platform-tools
-
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 # FINALLY CLUB ALL PATHS TOGETHER AND SET THE FINAL PATH VARIABLE
 # MacPorts Installer addition on 2013-09-05_at_12:10:03: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH
-export OPENAI_API_KEY=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
 # Reduced Syntax 
 test -e ~/.my_aliases  && . ~/.my_aliases || echo "File '$HOME/.my_aliases' is not present. Please Symlink the file"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 
+
+. "$HOME/.local/bin/env"
+. "$HOME/.cargo/env"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/Users/nichaurasia/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/Users/nichaurasia/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<

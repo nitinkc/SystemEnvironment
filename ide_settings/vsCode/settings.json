@@ -1,0 +1,118 @@
+{
+	"terminal.integrated.showCommandHint": true,
+    "workbench.iconTheme": "material-icon-theme",
+	"workbench.editor.decorations.colors": false,
+    "git.ignoreRebaseWarning": true,
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Red",
+    // ==========================================
+    // 1. WORKBENCH & INTERFACE UTILITIES
+    // ==========================================
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Night Owl (No Italics)",
+    "claudeCode.preferredLocation": "panel",
+    // Stops tabs from closing automatically when single-clicking a new file
+    "workbench.editor.enablePreview": false,
+    // ==========================================
+    // 2. FILE SAVING & FILE SYSTEM HANDLING
+    // ==========================================
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "explorer.compactFolders": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    // ==========================================
+    // 3. CODE EDITOR & LAYOUT BEHAVIOR
+    // ==========================================
+    // UI Smoothness & Animations
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.minimap.enabled": false,
+    // Formatting & Indentation
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "trailing",
+    // Structural Layout Guidance
+    "editor.bracketPairColorization.enabled": true,
+    // Renders thin vertical lines to guide your eye down nested code blocks
+    "editor.guides.bracketPairs": "active",
+    "editor.rulers": [
+        120
+    ],
+    // Wraps lines of code that are too long so you don't have to scroll horizontally
+    "editor.wordWrap": "on",
+    // ==========================================
+    // 4. TYPOGRAPHY STYLES
+    // ==========================================
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'JetBrains Mono',Menlo",
+    // Disabled ligatures since Consolas does not support them natively
+    "editor.fontLigatures": false,
+    // ==========================================
+    // 5. PYTHON & LINTHINT ENGINE
+    // ==========================================
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "88"
+    ],
+    "ruff.lint.run": "onSave",
+    // ==========================================
+    // 6. TERMINAL INTEGRATION
+    // ==========================================
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    // ==========================================
+    // 7. VERSION CONTROL & EXTENSION SCHEMAS
+    // ==========================================
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "gitlens.codeLens.enabled": false,
+    "yaml.schemas": {
+        "file:///Users/nichaurasia/.vscode/extensions/continue.continue-2.0.0-darwin-arm64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+    // ==========================================
+    // 8. DATA EXCLUSIONS & NOTEBOOKS
+    // ==========================================
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.ipynb_checkpoints": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true
+    },
+    "search.exclude": {
+        "**/.venv": true,
+        "**/node_modules": true,
+        "**/__pycache__": true,
+        "**/dist": true,
+        "**/*.egg-info": true
+    },
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 500,
+    // ==========================================
+    // 9. THEME CUSTOMIZATIONS
+    // ==========================================
+    "workbench.colorCustomizations": {},
+    "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
+    "editor.fontVariations": false
+}
