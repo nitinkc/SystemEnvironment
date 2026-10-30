@@ -27,3 +27,5 @@ ln -s $HOME/Programming/SystemEnvironment/mac/.wezterm.lua ~
 
 # Sublime make it availabe in PATH
 ln -s /Applications/Development/Sublime\ Text.app/Contents/SharedSupport/bin /usr/local/bin/.
+
+ln -s ~/Programming/SystemEnvironment/ide_settings/vsCode/settings.json ~/Library/"Application Support"/Code/User/

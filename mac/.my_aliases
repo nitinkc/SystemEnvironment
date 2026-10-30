@@ -98,7 +98,33 @@ alias hideQuitFinder='defaults write com.apple.finder QuitMenuItem -bool false; 
 alias ls='eza --icons=always'
 alias ll='eza --icons --long --header'
 alias la='eza --long --all --group'
+# ==============================================================================
+# EZA CONFIGURATION & SHORTHAND ALIASES
+# ==============================================================================
+# Requires 'eza' to be installed on your system.
+# Save this file as ~/.eza_aliases
+# ==============================================================================
 
+# Core Navigation & Daily Drive
+alias ls="eza --icons=always --group-directories-first"
+alias l="eza -lh --icons=always --group-directories-first"
+alias ll="eza -lah --icons=always --group-directories-first"
+alias la="eza -a"
+alias l1="eza -1 --icons=always"
+
+# Git & Code Development
+alias lgit="eza -la --git --icons=always"
+alias licon="eza -l --git-ignore --icons=always"
+
+# Folder Structures & Tree Views
+alias lt="eza --tree --level=2 --icons=always"
+alias lt3="eza --tree --level=3 --icons=always"
+alias lta="eza -a --tree --level=2 --icons=always"
+
+# Sorting & File Auditing
+alias lsize="eza -lah --sort=size --reverse"
+alias ltime="eza -lah --sort=modified --reverse"
+alias lnew="eza -lh --sort=created --reverse"
 alias mymac='fastfetch'
 
 alias hidePrompt="p10k display '*/dir'=hide '*/right/*'=hide"
