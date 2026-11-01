@@ -4,12 +4,10 @@
     "workbench.editor.decorations.colors": false,
     "git.ignoreRebaseWarning": true,
     "window.autoDetectColorScheme": true,
-    "workbench.preferredLightColorTheme": "Red",
     // ==========================================
     // 1. WORKBENCH & INTERFACE UTILITIES
     // ==========================================
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Night Owl (No Italics)",
     "claudeCode.preferredLocation": "panel",
     // Stops tabs from closing automatically when single-clicking a new file
     "workbench.editor.enablePreview": false,
@@ -113,7 +111,9 @@
     // 9. THEME CUSTOMIZATIONS
     // ==========================================
     "workbench.colorCustomizations": {},
+    "workbench.colorTheme": "Night Owl (No Italics)",
     "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
+    "workbench.preferredLightColorTheme": "Light 2026", // Catppuccin Macchiato
     "editor.fontVariations": false,
     // --- Quality of Life & Automation ---
     "explorer.confirmDelete": false,
@@ -121,5 +121,7 @@
     // "workbench.activityBar.location": "top",
     // --- Search and Performance ---
     "search.smartCase": true,
-    "workbench.list.smoothScrolling": true
+    "workbench.list.smoothScrolling": true,
+    "window.zoomLevel": 1,
+    "window.zoomPerWindow": true,
 }
